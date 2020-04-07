@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <div id="wrapper">
+    <img src="{{dados.avatar_url}}" alt="">
+    <h1>{{dados.title}}</h1>
+    <h2>{{dados.sub_title}}</h2>
+    <p>{{dados.description}}</a>
+  </p>
+</div>
+
+<div id="links-footer" class="links">
+  {% for link in dados.link %}
+    <a href="{{link.url}}" target="_black">{{link.name}}</a>
+  {% endfor %}
+</div>
+
+{% endblock %}
